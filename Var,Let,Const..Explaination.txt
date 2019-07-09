@@ -1,0 +1,123 @@
+var : 0. Var ko scope { block } k andr tk hi hota h ......
+
+      1.var se variable agr declare kren to us ko dubra redefine kr skty h to us ki
+        value phr new wli ho gi pechli se swape ho jy gi.
+
+      2.agr var variable same name ka ho or ik bhair ho or dusra andr kisi function main to bhair us variable ko call kren gy to
+        function se bhair wla call ho ga.
+
+      3. var tester = "hey hi";
+
+         function newFunction() {
+                    var hello = "hello";
+               }
+         console.log(hello); // error: hello is not defined
+
+   
+       4. var variables can be re-declared and updated
+
+                var greeter = "hey hi";
+                var greeter = "say Hello instead"; 
+  
+................................Also...................
+
+                var greeter = "hey hi";
+                    greeter = "say Hello instead";
+
+****************************************************************************************
+***********************************LET*********************************
+
+
+
+Let :  0.  let is block scoped
+           
+            let greeting = "say Hi";
+            let times = 4;
+
+            if (times > 3) {
+            let hello = "say Hello instead";
+            console.log(hello);//"say Hello instead"
+            }
+             console.log(hello) // hello is not defined
+
+
+       1. let can be updated but not re-declared.
+          
+            let greeting = "say Hi";
+            greeting = "say Hello instead";
+                
+                 this will work
+
+..................................................................
+
+           let greeting = "say Hi";
+           let greeting = "say Hello instead";
+
+          //error: Identifier 'greeting' has already been declared
+            ****However, if the same variable is defined in different scopes, there will be no error.
+
+.......................................................................
+
+    
+
+          let greeting = "say Hi";
+          if (true) {
+                   let greeting = "say Hello instead";
+                   console.log(greeting);//"say Hello instead"
+              }
+              console.log(greeting);//"say Hi"
+
+         Why is there no error? This is because both instances are treated as different
+         variables since they have different scopes.
+
+*********************************************************************************************************
+************************************Const***********************************
+
+const ; 0. const declarations are block scoped
+
+
+        1. const cannot be updated or re-declared
+
+
+           const greeting = "say Hi";
+                 greeting = "say Hello instead";//error : Assignment to constant variable. 
+   
+
+                nor this
+
+           const greeting = "say Hi";
+           const greeting = "say Hello instead";//error : Identifier 'greeting' has already been declared
+
+
+        2. Const se bna huwa object ki hm keys change kr skty h...
+
+           const v={
+                      name:"bakar";
+                    }
+              
+            we can do this  v.name="Ali" //// This will work but
+      
+           if we change object const v={ name="Ali"} //Here Error !!
+
+**************************************************************************************
+*************************Key Points***********************
+
+
+
+0.var declarations are globally scoped or function scoped while let and const are block scoped.
+
+1.var variables can be updated and re-declared within its scope;let variables can be updated but not re-declared;
+  const variables can neither be updated nor re-declared.
+
+2.They are all hoisted to the top of their scope but while varvariables are initialized with undefined,
+  let and const variables are not initialized.
+
+3.While var and let can be declared without being initialized, const must be initialized during declaration.
+
+
+ 
+
+
+
+
+
